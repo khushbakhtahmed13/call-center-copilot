@@ -1,8 +1,8 @@
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 import os
-from prompts import SUMMARY_PROMPT
-from schemas import CallSummary
+from prompts import SUMMARY_PROMPT, SENTIMENT_PROMPT
+from schemas import CallSummary, SentimentAnalysis
 
 load_dotenv()
 
@@ -62,6 +62,12 @@ def call_summary():
     
     return message
 
+def sentiment_analysis():
+    structured_llm = llm.with_structured_output(SentimentAnalysis)
+    message = structured_llm.invoke(SENTIMENT_PROMPT.format(conversation = final_transcript))
+
+    return message
+
 if __name__ == "__main__":
-    answer = call_summary()
+    answer = sentiment_analysis()
     print(answer)
