@@ -77,8 +77,6 @@ def get_final_transcript(path):
     return final_transcript
 
 
-
-
 if __name__ == "__main__":
     path = "data/calls/synthetic_bank_call.wav"
     try:
