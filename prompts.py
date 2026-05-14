@@ -12,7 +12,7 @@ Focus on:
 Conversation:
 {conversation}
 
-Return concise and accurate information only.
+Return concise and accurate structured information only.
 """
 
 SENTIMENT_PROMPT = """
@@ -67,6 +67,10 @@ Evaluate:
 
 Use the compliance analysis and sentiment analysis results as supporting context when evaluating the agent.
 
+Only mention strengths and improvement areas explicitly supported by the conversation.
+Do not invent unsupported training deficiencies or operational issues.
+Base evaluations strictly on observable agent behavior.
+
 Conversation:
 {conversation}
 
@@ -88,13 +92,21 @@ Analyze the following customer support conversation and identify operational, re
 
 Use the provided sentiment analysis, compliance analysis, and agent performance evaluation as supporting context.
 
+Only identify risks clearly supported by the conversation and prior analysis outputs.
+Do not invent unsupported operational or fraud concerns.
+
+For all risk severity fields, return ONLY one of:
+None, Low, Low to Moderate, Moderate, High, or Very High.
+
+Use detected_risk_factors to describe specific operational, customer, or business concerns.
+
 Focus on:
-- customer churn risk
-- escalation likelihood
-- reputational risk to the bank
-- operational or compliance-related concerns
+- customer churn risk severity
+- escalation risk severity
+- reputational risk severity
+- operational risk severity
+- fraud risk severity
 - urgency of follow-up actions
-- possible fraud indicators
 - unresolved customer dissatisfaction
 
 Conversation:
