@@ -1,0 +1,115 @@
+================================================================================
+                  HORIZON NATIONAL BANK — COMPLIANCE POLICY
+                    Customer Support Agent Standards & Obligations
+                       Version 5.1 | Effective: Jan 1, 2025
+================================================================================
+
+1. PURPOSE
+-----------
+This policy ensures that all customer support agents operate in accordance with
+applicable banking regulations, data protection laws (including GLBA, CCPA, and
+FDCPA), and internal conduct standards. Non-compliance may result in disciplinary
+action, fines, or termination.
+
+2. IDENTITY VERIFICATION (KYC — KNOW YOUR CUSTOMER)
+-----------------------------------------------------
+Before discussing any account details, agents MUST verify the customer's identity
+using at least TWO (2) of the following identifiers:
+
+  Primary Identifiers (must use at least one):
+    - Full Social Security Number (last 4 digits acceptable for low-risk queries)
+    - Government-issued Photo ID number (passport, driver's license)
+    - Date of Birth
+
+  Secondary Identifiers (must use at least one):
+    - Registered phone number on file
+    - Billing address (street + ZIP)
+    - Mother's maiden name or security question answer
+    - One-time passcode (OTP) sent to registered email or mobile number
+
+  ⚠ IMPORTANT: If a customer fails verification twice, the agent must lock the
+  session and advise the customer to visit a branch with valid ID. Do NOT attempt
+  a third verification on the same call.
+
+3. DATA PRIVACY & CONFIDENTIALITY
+-----------------------------------
+  - Agents must never share full account numbers, SSNs, or passwords verbally.
+    Mask all sensitive data in notes and screen shares (e.g., XXXX-XXXX-XXXX-4321).
+  - Customer data must not be accessed for any purpose unrelated to the active
+    support interaction.
+  - Sharing customer data with third parties is prohibited without explicit written
+    customer consent or a valid legal order.
+  - Agents working remotely must use only bank-approved VPN and devices. No
+    customer data may be stored locally on personal devices.
+
+4. CALL RECORDING & MONITORING
+--------------------------------
+  - All calls are recorded for quality assurance and regulatory compliance.
+  - Agents must inform customers of call recording at the start of every
+    interaction using the approved disclosure: "This call may be recorded for
+    quality and training purposes."
+  - Agents may not disable, pause, or interfere with call recording systems.
+
+5. FAIR DEBT COLLECTION & COMMUNICATION STANDARDS
+---------------------------------------------------
+In alignment with the FDCPA and internal conduct policy:
+  - Agents must never use threatening, abusive, or misleading language.
+  - Agents may not contact customers about past-due accounts outside the hours
+    of 8:00 AM – 9:00 PM (customer's local time).
+  - Cease-and-desist requests must be escalated to the Collections Compliance
+    Team immediately and flagged in the CRM.
+  - Agents must never misrepresent the amount owed, consequences of non-payment,
+    or the bank's legal authority.
+
+6. ANTI-MONEY LAUNDERING (AML) OBLIGATIONS
+--------------------------------------------
+  - Agents who identify suspicious customer behavior during calls (e.g., requests
+    to split large transfers, unusual urgency, reluctance to verify identity) must
+    file an internal Suspicious Activity Note (SAN) via the CRM.
+  - Agents must not tip off the customer that a report has been or may be filed.
+  - Refer all SAN situations to the AML Compliance Officer within the same shift.
+
+7. SCRIPT & DISCLOSURE COMPLIANCE
+------------------------------------
+  - Agents must deliver all mandatory disclosures as scripted and must not
+    improvise or omit them, including:
+      • Call recording notice
+      • Right to dispute notice (during billing discussions)
+      • Privacy notice (first contact per calendar year)
+  - Deviating from approved scripts during product offers or fee explanations
+    is a compliance violation subject to QA scoring penalties.
+
+8. SOCIAL ENGINEERING AWARENESS
+---------------------------------
+  - Agents must never override identity verification based on emotional pressure
+    or urgency expressed by the caller.
+  - Requests from callers claiming to be bank executives or law enforcement must
+    follow the same verification protocol. Legitimate internal requests are routed
+    through secure internal channels, not inbound customer lines.
+  - If an agent suspects a social engineering attempt, they must end the call
+    professionally and report to the Security & Fraud team immediately.
+
+9. COMPLIANCE TRAINING REQUIREMENTS
+--------------------------------------
+All agents must complete:
+  - Annual GLBA & Data Privacy certification (due Jan 31 each year)
+  - Quarterly AML awareness refresher
+  - Monthly QA calibration session with Team Lead
+
+Agents with overdue certifications are restricted from handling Tier 2 and
+above cases until training is completed.
+
+10. VIOLATION REPORTING
+------------------------
+Agents who witness compliance violations by peers must report them via:
+  - Internal Ethics Hotline: 1-800-FNB-SAFE (anonymous)
+  - Email: compliance@horizonnationalbank.com
+  - Direct report to Compliance Officer (Branch or Remote)
+
+Retaliation against whistleblowers is strictly prohibited and grounds for
+immediate termination.
+
+================================================================================
+                   For internal use only. Do not share with customers.
+                    Questions? Contact compliance@horizonnationalbank.com
+================================================================================

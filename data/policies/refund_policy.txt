@@ -1,0 +1,95 @@
+================================================================================
+                     HORIZON NATIONAL BANK — REFUND POLICY
+                          Customer Support Division
+                       Version 3.2 | Effective: Jan 1, 2025
+================================================================================
+
+1. OVERVIEW
+-----------
+Horizon National Bank is committed to resolving customer billing disputes and
+transaction errors promptly and fairly. This policy governs how refunds,
+provisional credits, and dispute adjustments are handled by customer support
+agents across all service channels.
+
+2. DUPLICATE TRANSACTION DISPUTES
+----------------------------------
+Customers reporting duplicate charges or transactions may be eligible for a
+provisional credit within 3–5 business days following formal dispute initiation.
+Agents must log the dispute in the CRM system and issue a Case Reference Number
+to the customer before the call ends. Supporting documentation (e.g., bank
+statements or screenshots) may be requested but is not mandatory to initiate a
+provisional credit for amounts under $500.
+
+3. UNAUTHORIZED TRANSACTION CLAIMS
+------------------------------------
+For transactions the customer did not authorize, agents must:
+  a) Flag the account for fraud review immediately.
+  b) Issue a provisional credit within 1–2 business days for amounts up to $2,500.
+  c) Escalate amounts exceeding $2,500 to the Fraud Investigation Team.
+  d) Advise the customer that final determination is made within 10 business days.
+
+Provisional credits may be reversed if the investigation finds the transaction
+to be legitimate.
+
+4. MERCHANT DISPUTES
+---------------------
+If a customer did not receive goods or services paid for via debit/credit card:
+  - A formal chargeback request must be initiated within 60 days of the
+    transaction date.
+  - Agents must verify that the customer first attempted resolution with the
+    merchant directly.
+  - Provisional credit is issued within 5–7 business days pending merchant
+    response.
+  - Merchants have 30 days to contest the chargeback before funds are finalized.
+
+5. ATM & CASH DISPUTES
+------------------------
+Customers reporting ATM errors (e.g., cash not dispensed, incorrect amount) are
+entitled to a provisional credit within 24 business hours. Agents must record the
+ATM location, date, time, and claimed amount. ATM log review is automatically
+triggered upon case creation.
+
+6. REFUND ELIGIBILITY LIMITS
+------------------------------
+  - Agents may approve provisional credits up to $500 without supervisor sign-off.
+  - Credits between $500–$2,500 require Team Lead approval within the same call
+    session or via callback within 4 business hours.
+  - Credits exceeding $2,500 must be routed to the Dispute Resolution Unit.
+
+7. FEES & SERVICE CHARGE REFUNDS
+----------------------------------
+  - Agents may waive or refund up to two (2) monthly service fees or overdraft
+    fees per customer account per calendar year as a goodwill gesture.
+  - Waiving more than two fees requires supervisor authorization.
+  - Annual fee refunds for premium accounts require Branch Manager approval.
+
+8. REFUND TIMELINE COMMUNICATION
+----------------------------------
+Agents must clearly communicate the following to every customer with an open
+dispute:
+  a) Estimated credit timeline.
+  b) Case Reference Number.
+  c) How to check dispute status (online portal, app, or callback number).
+  d) Right to submit additional documentation within 7 days of dispute initiation.
+
+9. DOCUMENTATION & COMPLIANCE
+-------------------------------
+All refund and dispute actions must be logged in the CRM with:
+  - Customer ID and verified account number.
+  - Dispute category and claimed amount.
+  - Provisional credit amount and date issued.
+  - Agent ID and supervisor approval reference (if applicable).
+
+Failure to document refund actions is subject to disciplinary review.
+
+10. CONTACT FOR DISPUTES
+-------------------------
+Customers may also submit disputes via:
+  - Online Banking Portal → "Dispute a Transaction"
+  - Email: disputes@horizonnationalbank.com
+  - Written correspondence: Horizon National Bank Dispute Center, PO Box 4820
+
+================================================================================
+                   For internal use only. Do not share with customers.
+                    Questions? Contact QA@horizonnationalbank.com
+================================================================================

@@ -1,0 +1,133 @@
+================================================================================
+                HORIZON NATIONAL BANK — ESCALATION PROTOCOL
+                      Customer Support Call Center
+                       Version 4.0 | Effective: Jan 1, 2025
+================================================================================
+
+1. PURPOSE
+-----------
+This protocol establishes clear escalation pathways to ensure that complex,
+high-risk, or emotionally sensitive customer interactions are handled by the
+appropriate level of authority. Proper escalation protects the customer, the
+agent, and the bank from regulatory and reputational risk.
+
+2. ESCALATION TIERS
+---------------------
+
+  TIER 1 — AGENT LEVEL
+  Agents handle standard inquiries including: account balance questions, basic
+  transaction history, password resets, card activation, and low-value dispute
+  initiation. Agents may resolve cases independently when:
+    - The issue is clearly within documented policy.
+    - The required credit or waiver is within agent authority limits (≤ $500).
+    - The customer is calm and the path to resolution is clear.
+
+  TIER 2 — TEAM LEAD / SENIOR AGENT
+  Escalate to Team Lead when:
+    - The customer explicitly requests to speak with a supervisor.
+    - A credit or fee waiver between $500–$2,500 is required.
+    - The customer has made the same complaint in 3 or more prior contacts within
+      60 days without resolution.
+    - The customer expresses intent to close their account or switch banks.
+    - The agent is unsure of the correct policy application.
+    - The interaction has exceeded 20 minutes without a clear resolution path.
+  
+  TIER 3 — SPECIALIST TEAM / DEPARTMENT ROUTING
+  Escalate directly to the appropriate specialist team for:
+    - Fraud & Unauthorized Transactions → Fraud Investigation Unit
+    - Legal threats or subpoenas → Legal & Compliance Department
+    - Suspected AML/suspicious activity → AML Compliance Officer
+    - Loan modification or hardship requests → Lending Support Team
+    - Premium/Private Banking customers → Dedicated Relationship Manager
+    - Regulatory complaints (CFPB, OCC mentions) → Regulatory Affairs Team
+
+  TIER 4 — MANAGEMENT ESCALATION
+  Escalate to Branch/Operations Manager when:
+    - A credit or adjustment exceeds $2,500.
+    - Media involvement or social media threats are mentioned by the customer.
+    - The customer identifies as a legal representative or journalist.
+    - A Tier 2 resolution attempt has failed and the customer remains unresolved.
+    - An agent misconduct complaint is filed during the call.
+
+3. MANDATORY ESCALATION TRIGGERS
+----------------------------------
+The following scenarios REQUIRE immediate escalation regardless of tier — agents
+must NOT attempt to resolve these independently:
+
+  🔴 Customer mentions self-harm, harm to others, or a crisis situation.
+       → End the support interaction, escalate to supervisor, and provide the
+         National Crisis Hotline: 988 (Suicide & Crisis Lifeline).
+
+  🔴 Customer uses threatening or abusive language toward the agent.
+       → Agent may issue one verbal warning, then transfer to supervisor.
+         Document the interaction in CRM using the "Hostile Caller" tag.
+
+  🔴 Suspected elder financial abuse or vulnerable customer indicators.
+       → Transfer to Fraud Investigation Unit and flag CRM with
+         "Vulnerable Customer — Possible Exploitation."
+
+  🔴 Customer claims their account was accessed by law enforcement or a
+     government agency.
+       → Do not confirm or deny any account actions. Transfer immediately to
+         Legal & Compliance.
+
+  🔴 Agent identifies a potential data breach or system anomaly during the call.
+       → Alert IT Security on the internal breach hotline (#4911) while keeping
+         the customer on hold. Do not disclose the anomaly to the customer.
+
+4. ESCALATION PROCEDURE — STEP BY STEP
+-----------------------------------------
+  Step 1: Inform the customer clearly and professionally:
+          "I want to make sure you receive the best assistance. I'm going to
+           connect you with [Team Lead / Specialist] who can resolve this for you."
+
+  Step 2: Brief the receiving party (warm transfer) with:
+          - Customer name and verified account number
+          - Issue summary (2–3 sentences)
+          - Steps already taken
+          - Customer's emotional state (e.g., frustrated, distressed, calm)
+
+  Step 3: Log the escalation in CRM before the call ends, including:
+          - Escalation tier and reason code
+          - Receiving agent/department name or ID
+          - Timestamp of escalation
+
+  Step 4: Follow up (if warm transfer was not possible):
+          - Provide the customer with a Case Reference Number.
+          - Commit to a specific callback timeframe (maximum 4 business hours for
+            Tier 2; 1 business day for Tier 3).
+
+5. CHURN RISK ESCALATION (SAVE PROTOCOL)
+------------------------------------------
+When a customer expresses intent to leave the bank, agents must:
+  a) Acknowledge the concern empathetically — never argue or minimize.
+  b) Attempt one retention offer from the approved Retention Offers List (CRM).
+  c) If the customer remains firm, escalate to Tier 2 for a secondary save attempt.
+  d) If the customer still insists, process the request and log a "Churn Risk"
+     tag in the CRM for the Retention Analytics Team.
+
+  Do NOT hold a customer's request hostage as a retention tactic. All closure
+  or cancellation requests must ultimately be honored.
+
+6. ESCALATION RESPONSE TIME STANDARDS
+---------------------------------------
+  Tier 2 (Team Lead):        Available within 3 minutes during operating hours.
+  Tier 3 (Specialist Team):  Response within 4 business hours; callback if unavailable.
+  Tier 4 (Management):       Response within 1 business day; same-day for media/legal.
+  Emergency Triggers:        Immediate — no hold time acceptable.
+
+7. AFTER-CALL DOCUMENTATION
+-----------------------------
+Every escalated call must have a completed CRM note including:
+  - Escalation reason code (see Appendix A in the Agent Handbook)
+  - Resolution provided or expected resolution date
+  - Customer satisfaction indicator (Resolved / Pending / Unresolved)
+  - Whether a follow-up commitment was made
+
+Incomplete escalation notes are flagged during weekly QA audits and count
+against the agent's compliance score.
+
+================================================================================
+                   For internal use only. Do not share with customers.
+                    Questions? Contact QA@horizonnationalbank.com
+================================================================================
