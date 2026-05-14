@@ -4,11 +4,23 @@ import os
 from prompts import SUMMARY_PROMPT, SENTIMENT_PROMPT, COMPLIANCE_PROMPT, AGENT_PERFORMANCE_PROMPT, RISK_DETECTION_PROMPT
 from schemas import CallSummary, SentimentAnalysis, ComplianceAnalysis, AgentPerformance, RiskDetection
 from config import retriever
+from typing import TypedDict, Optional
 
 load_dotenv()
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
+# State
+class CallState(TypedDict):
+    transcript : str
+    summary : Optional[CallSummary]
+    sentiment_analysis : Optional[SentimentAnalysis]
+    compliance_analysis : Optional[ComplianceAnalysis]
+    agent_performance : Optional[AgentPerformance]
+    risk_detection : Optional[RiskDetection]
+
+
+# Model 
 llm = ChatGroq(
       model = "llama-3.3-70b-versatile",
       api_key = GROQ_API_KEY
@@ -57,19 +69,23 @@ final_transcript =  [
     {"speaker": "SPEAKER_01", "start": 211.3, "end": 212.3, "text": "Yeah, you too."}
 ]
 
-def call_summary():
+def call_summary(state : CallState):
     structured_llm = llm.with_structured_output(CallSummary)
-    message = structured_llm.invoke(SUMMARY_PROMPT.format(conversation = final_transcript))
+    response = structured_llm.invoke(SUMMARY_PROMPT.format(conversation = state.get("transcript")))
     
-    return message
+    return {
+        "summary" : response
+    }
 
-def sentiment_analysis():
+def sentiment_analysis(state : CallState):
     structured_llm = llm.with_structured_output(SentimentAnalysis)
-    message = structured_llm.invoke(SENTIMENT_PROMPT.format(conversation = final_transcript))
+    response = structured_llm.invoke(SENTIMENT_PROMPT.format(conversation = state.get("transcript")))
 
-    return message
+    return {
+        "sentiment_analysis" : response
+    }
 
-def compliance_analysis():
+def compliance_analysis(state : CallState):
     # Retrieval 
     query = f"""
 Analyze policies related to:
@@ -79,27 +95,33 @@ Analyze policies related to:
 - escalation procedures
 
 Conversation:
-{final_transcript}
+{state.get("transcript")}
 """
     retrieved_docs = retriever.invoke(query)
     context = "\n\n".join([doc.page_content for doc in retrieved_docs])
 
     structured_llm = llm.with_structured_output(ComplianceAnalysis)
-    message = structured_llm.invoke(COMPLIANCE_PROMPT.format(conversation = final_transcript, policies = context))
+    response = structured_llm.invoke(COMPLIANCE_PROMPT.format(conversation = state.get("transcript"), policies = context))
     
-    return message
+    return {
+        "compliance_analysis" : response 
+    }
 
-def agent_performance():
+def agent_performance(state : CallState):
     structured_llm = llm.with_structured_output(AgentPerformance)
-    message = structured_llm.invoke(AGENT_PERFORMANCE_PROMPT.format(conversation = final_transcript, sentiment_analysis = sentiment_analysis(), compliance_analysis = compliance_analysis()))
+    response = structured_llm.invoke(AGENT_PERFORMANCE_PROMPT.format(conversation = state.get("transcript"), sentiment_analysis = state.get("sentiment_analysis"), compliance_analysis = state.get("compliance_analysis")))
 
-    return message
+    return {
+        "agent_performance" : response
+    }
 
-def risk_detection():
+def risk_detection(state : CallState):
     structured_llm = llm.with_structured_output(RiskDetection)
-    message = structured_llm.invoke(RISK_DETECTION_PROMPT.format(conversation = final_transcript, sentiment_analysis = sentiment_analysis(), compliance_analysis = compliance_analysis(), agent_performance_analysis = agent_performance()))
+    response = structured_llm.invoke(RISK_DETECTION_PROMPT.format(conversation = state.get("transcript"), sentiment_analysis = state.get("sentiment_analysis"), compliance_analysis = state.get("compliance_analysis"), agent_performance_analysis = state.get("agent_performance")))
 
-    return message
+    return {
+        "risk_detection" : response
+    }
 
 if __name__ == "__main__":
     answer = risk_detection()
