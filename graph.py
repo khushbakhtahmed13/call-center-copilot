@@ -1,8 +1,9 @@
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 import os
-from prompts import SUMMARY_PROMPT, SENTIMENT_PROMPT
-from schemas import CallSummary, SentimentAnalysis
+from prompts import SUMMARY_PROMPT, SENTIMENT_PROMPT, COMPLIANCE_PROMPT
+from schemas import CallSummary, SentimentAnalysis, ComplianceAnalysis
+from config import retriever
 
 load_dotenv()
 
@@ -68,6 +69,26 @@ def sentiment_analysis():
 
     return message
 
+def compliance_analysis():
+    # Retrieval 
+    query = f"""
+Analyze policies related to:
+- refunds
+- disputes
+- identity verification
+- escalation procedures
+
+Conversation:
+{final_transcript}
+"""
+    retrieved_docs = retriever.invoke(query)
+    context = "\n\n".join([doc.page_content for doc in retrieved_docs])
+
+    structured_llm = llm.with_structured_output(ComplianceAnalysis)
+    message = structured_llm.invoke(COMPLIANCE_PROMPT.format(conversation = final_transcript, policies = context))
+    
+    return message
+
 if __name__ == "__main__":
-    answer = sentiment_analysis()
+    answer = compliance_analysis()
     print(answer)

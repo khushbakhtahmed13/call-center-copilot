@@ -31,3 +31,24 @@ Conversation:
 
 Return concise and accurate structured information only.
 """
+
+COMPLIANCE_PROMPT = """
+You are an AI compliance and quality assurance assistant for a bank call center.
+
+Analyze the following customer support conversation using the provided company policies.
+
+Determine:
+- whether the agent followed identity verification procedures
+- whether refund/dispute handling followed policy
+- whether escalation procedures were necessary
+- whether empathy and professionalism were demonstrated
+- whether any compliance violations occurred
+
+Conversation:
+{conversation}
+
+Relevant Policies:
+{policies}
+
+Return concise and accurate structured analysis only.
+"""
