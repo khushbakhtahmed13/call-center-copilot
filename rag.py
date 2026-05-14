@@ -1,6 +1,5 @@
 from langchain_community.document_loaders import DirectoryLoader, TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 
 # Data Ingestion
@@ -16,11 +15,7 @@ splitter = RecursiveCharacterTextSplitter(
 chunks = splitter.split_documents(documents)
 
 # Embedding
-embeddings = HuggingFaceEmbeddings(
-           model_name = "BAAI/bge-small-en-v1.5",
-           model_kwargs = {"device" : "cpu"},
-           encode_kwargs = {"normalize_embeddings" : True}
-)
+from embeddings import embeddings
 
 # Vector Database
 vector_db = Chroma.from_documents(

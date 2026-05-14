@@ -1,5 +1,5 @@
 from langchain_chroma import Chroma 
-from rag import embeddings
+from embeddings import embeddings
 
 # Load vector database
 vector_db = Chroma(
