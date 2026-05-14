@@ -1,8 +1,8 @@
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 import os
-from prompts import SUMMARY_PROMPT, SENTIMENT_PROMPT, COMPLIANCE_PROMPT
-from schemas import CallSummary, SentimentAnalysis, ComplianceAnalysis
+from prompts import SUMMARY_PROMPT, SENTIMENT_PROMPT, COMPLIANCE_PROMPT, AGENT_PERFORMANCE_PROMPT, RISK_DETECTION_PROMPT
+from schemas import CallSummary, SentimentAnalysis, ComplianceAnalysis, AgentPerformance, RiskDetection
 from config import retriever
 
 load_dotenv()
@@ -89,6 +89,18 @@ Conversation:
     
     return message
 
+def agent_performance():
+    structured_llm = llm.with_structured_output(AgentPerformance)
+    message = structured_llm.invoke(AGENT_PERFORMANCE_PROMPT.format(conversation = final_transcript, sentiment_analysis = sentiment_analysis(), compliance_analysis = compliance_analysis()))
+
+    return message
+
+def risk_detection():
+    structured_llm = llm.with_structured_output(RiskDetection)
+    message = structured_llm.invoke(RISK_DETECTION_PROMPT.format(conversation = final_transcript, sentiment_analysis = sentiment_analysis(), compliance_analysis = compliance_analysis(), agent_performance_analysis = agent_performance()))
+
+    return message
+
 if __name__ == "__main__":
-    answer = compliance_analysis()
+    answer = risk_detection()
     print(answer)

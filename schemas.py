@@ -21,3 +21,24 @@ class ComplianceAnalysis(BaseModel):
     refund_policy_followed: bool
     compliance_issues: List[str]
     overall_compliance: str
+
+class AgentPerformance(BaseModel):
+    professionalism_score: int
+    empathy_score: int
+    communication_clarity_score: int
+    resolution_effectiveness_score: int
+    policy_adherence_score: int
+    overall_score: int
+    strengths: list[str]
+    improvement_areas: list[str]
+
+class RiskDetection(BaseModel):
+    customer_churn_risk: str
+    escalation_risk: str
+    fraud_risk: str
+    reputational_risk: str
+    operational_risk: str
+    urgent_follow_up_required: bool
+    detected_risk_factors: List[str]
+    recommended_actions: List[str]
+    overall_risk_level: str
