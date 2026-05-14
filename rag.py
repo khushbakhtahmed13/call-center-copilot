@@ -28,13 +28,4 @@ vector_db = Chroma.from_documents(
             embedding = embeddings,
             persist_directory = "chroma_db")
 
-# Retriever
-retriever = vector_db.as_retriever(
-            search_type = "similarity",
-            search_kwargs = {"k" : 5}
-)
 
-if __name__ == "__main__":
-    answers = retriever.invoke("identity verification and refund dispute handling")
-    for answer in answers:
-        print(answer.page_content, " -> ", answer.metadata)
