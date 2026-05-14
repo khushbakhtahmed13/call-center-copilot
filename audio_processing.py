@@ -77,14 +77,3 @@ def get_final_transcript(path):
     return final_transcript
 
 
-if __name__ == "__main__":
-    path = "data/calls/synthetic_bank_call.wav"
-    try:
-       #transcript_data = transcribe_audio(path)
-       #print(transcript_data)
-       #diarize_data = diarize_audio(path)
-       final_transcript = get_final_transcript(path)
-       for entry in final_transcript:
-           print(entry)
-    except Exception as e:
-        print(f"Error: {e}")
