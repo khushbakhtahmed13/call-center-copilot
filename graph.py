@@ -1,15 +1,10 @@
-from langchain_groq import ChatGroq
-from dotenv import load_dotenv
-import os
 from prompts import SUMMARY_PROMPT, SENTIMENT_PROMPT, COMPLIANCE_PROMPT, AGENT_PERFORMANCE_PROMPT, RISK_DETECTION_PROMPT
 from schemas import CallSummary, SentimentAnalysis, ComplianceAnalysis, AgentPerformance, RiskDetection
-from config import retriever
+from config import retriever, llm
 from typing import TypedDict, Optional
 from langgraph.graph import StateGraph, END
 
-load_dotenv()
 
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 # State
 class CallState(TypedDict):
@@ -20,13 +15,6 @@ class CallState(TypedDict):
     agent_performance : Optional[AgentPerformance]
     risk_detection : Optional[RiskDetection]
 
-
-# Model 
-llm = ChatGroq(
-      model = "qwen3-32b",
-      temperature = 0,
-      api_key = GROQ_API_KEY
-)
 
 # Node functions
 

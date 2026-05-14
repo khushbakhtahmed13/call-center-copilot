@@ -1,15 +1,8 @@
-from faster_whisper import WhisperModel
-from pyannote.audio import Pipeline
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
-
-model = WhisperModel("base", device = "cpu", compute_type = "int8")
+from config import whisper_model, diarization_pipeline
 
 def transcribe_audio(path):
 
-    segments, info = model.transcribe(path)
+    segments, info = whisper_model.transcribe(path)
 
     transcript_data = []
     
@@ -22,15 +15,10 @@ def transcribe_audio(path):
     
     return transcript_data
 
-HF_TOKEN = os.getenv("HF_TOKEN")
-pipeline = Pipeline.from_pretrained(
-            "pyannote/speaker-diarization-3.1",
-            token = HF_TOKEN
-    )
 
 def diarize_audio(path):
 
-    diarization = pipeline(path, num_speakers = 2)
+    diarization = diarization_pipeline(path, num_speakers = 2)
 
     diarize_data = []
 
